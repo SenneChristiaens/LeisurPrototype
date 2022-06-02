@@ -32,4 +32,21 @@
       <img class="event--image" src="../assets/tennis.svg" alt="tennis" />
     </div>
   </div>
+  <nav class="nav">
+    <a href="#" class="nav__link">
+      <img src="../assets/home.svg" alt="home" />
+    </a>
+    <a href="#" class="nav__link">
+      <img src="../assets/search.svg" alt="search" />
+    </a>
+    <a href="#" class="nav__link">
+      <img src="../assets/create.svg" alt="create" />
+    </a>
+    <a href="#" class="nav__link">
+      <img src="../assets/explore.svg" alt="explore" />
+    </a>
+    <a href="#" class="nav__link">
+      <img src="../assets/profile.svg" alt="profile" />
+    </a>
+  </nav>
 </template>
