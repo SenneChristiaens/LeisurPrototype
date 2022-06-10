@@ -3,22 +3,6 @@ import { onMounted } from "vue";
 import Navigation from "../components/Navigation.vue";
 
 let active = "home";
-let button = document.querySelector(".button--participate");
-
-
-let props = defineProps({
-  active: String,
-});
-
-// button.addEventListener("click", () => {
-//   console.log("clicked");
-//   switch (props.active) {
-//     case "participate":
-//       button.classList.toggle("active");
-//       button.innerHTML("Participating");
-//       break;
-//   }
-// });
 </script>
 
 <template>
@@ -37,7 +21,7 @@ let props = defineProps({
           <p>@niels_verdickt</p>
         </div>
       </div>
-      <button class="button--participate">Participate</button>
+      <button v-on:click="active != active" class="button--participate">Participate</button>
     </div>
     <h2 class="event--title">Tennis initiation</h2>
     <div class="event--info">
@@ -113,6 +97,16 @@ let props = defineProps({
   </div>
   <Navigation :active="active" />
 </template>
+
+<script>
+export default {
+  data: () => {
+    return {
+      active: false
+    };
+  },
+};
+</script>
 
 <style scoped>
 h1 {

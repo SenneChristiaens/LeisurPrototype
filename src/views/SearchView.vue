@@ -52,7 +52,11 @@ input {
 }
 
 input::placeholder {
-  padding-left: 1em;
+  color: #bdbdbd;
+}
+
+input {
+  text-indent: 2em;
   color: #bdbdbd;
 }
 
