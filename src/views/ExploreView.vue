@@ -14,7 +14,13 @@ let active = "explore";
       <img src="../assets/sandra.svg" alt="Sandra" />
       <h2>Sandra More</h2>
       <p>I am 32 and always up for a game of tennis!</p>
-      <button class="button--connect">+ Connect</button>
+      <button
+        @click="toggle = !toggle"
+        class="button--connect"
+        :class="{ connect: !toggle }"
+      >
+        {{ toggle ? "+ Connect" : "⎷ Sent" }}
+      </button>
     </div>
     <div class="tile">
       <img src="../assets/pieter.svg" alt="Pieter" />
@@ -51,6 +57,16 @@ let active = "explore";
   <Navigation :active="active" />
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      toggle: true,
+    };
+  },
+};
+</script>
+
 <style scoped>
 h1 {
   font-family: "Merriweather", sans-serif;
@@ -62,6 +78,13 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 20px;
+}
+
+.connect {
+  color: white;
+  background: #ff6700;
+  border: 3px solid #ff6700;
+  border-radius: 30px;
 }
 
 .intro {

@@ -13,7 +13,7 @@ let active = "create";
     <input type="text" placeholder="Online link or Adress" />
     <label>Date</label>
     <input type="text" placeholder="Date" />
-    <img class="calendar" src="../assets/calendar_big.svg" alt="">
+    <img class="calendar" src="../assets/calendar_big.svg" alt="" />
     <label>Information</label>
     <textarea
       style="resize: none"
@@ -22,7 +22,9 @@ let active = "create";
       placeholder="Add some extra information about the event..."
     ></textarea>
   </form>
-  <RouterLink to="/"><img class="button" src="../assets/button.svg" alt="button"></RouterLink>
+  <RouterLink to="/"
+    ><img class="button" src="../assets/button.svg" alt="button"
+  /></RouterLink>
   <Navigation :active="active" />
 </template>
 
@@ -68,11 +70,10 @@ textarea {
 }
 
 .calendar {
-position: absolute;
-left: 83.08%;
-right: 11.79%;
-top: 48.84%;
-bottom: 44.79%;
+  position: absolute;
+  left: 83.08%;
+  right: 11.79%;
+  top: 48.84%;
+  bottom: 44.79%;
 }
-
 </style>

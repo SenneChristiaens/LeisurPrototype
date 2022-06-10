@@ -1,7 +1,5 @@
 <script setup>
-import { RouterView } from 'vue-router'
-
-
+import { RouterView } from "vue-router";
 </script>
 
 <template>
@@ -9,10 +7,9 @@ import { RouterView } from 'vue-router'
 </template>
 
 <style>
-@import url('../sass/_global.scss');
-@import url('https://use.typekit.net/kot7xgx.css');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-
+@import url("../sass/_global.scss");
+@import url("https://use.typekit.net/kot7xgx.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
 #app {
   -webkit-font-smoothing: antialiased;

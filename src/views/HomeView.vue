@@ -1,5 +1,4 @@
 <script setup>
-import { onMounted } from "vue";
 import Navigation from "../components/Navigation.vue";
 
 let active = "home";
@@ -21,7 +20,13 @@ let active = "home";
           <p>@niels_verdickt</p>
         </div>
       </div>
-      <button v-on:click="active != active" class="button--participate">Participate</button>
+      <button
+        @click="toggle = !toggle"
+        class="button--participate"
+        :class="{ participating: !toggle }"
+      >
+        {{ toggle ? "Participate" : "Participating" }}
+      </button>
     </div>
     <h2 class="event--title">Tennis initiation</h2>
     <div class="event--info">
@@ -63,12 +68,14 @@ let active = "home";
         <h3>20/06/2022</h3>
       </div>
       <p>
-        I work at Intracto and am a senior developer in Node.JS. This is my passion for over 20 years and I want to give other people the chance to see the power of Node.JS
+        I work at Intracto and am a senior developer in Node.JS. This is my
+        passion for over 20 years and I want to give other people the chance to
+        see the power of Node.JS
       </p>
       <img class="event--image" src="../assets/node.svg" alt="node" />
     </div>
   </div>
-    <div class="box last">
+  <div class="box last">
     <div class="header">
       <div class="profile">
         <img src="../assets/senneklein.svg" alt="Senne" />
@@ -77,7 +84,7 @@ let active = "home";
           <p>@senne_christiaens</p>
         </div>
       </div>
-      <img src="../assets/pencil.svg" alt="pencil">
+      <img src="../assets/pencil.svg" alt="pencil" />
     </div>
     <h2 class="event--title">Fitness workout</h2>
     <div class="event--info">
@@ -90,9 +97,15 @@ let active = "home";
         <h3>01/07/2022</h3>
       </div>
       <p>
-        Looking for a gym partner to share my passion with. Age doesn’t matter. Motivation and being dedicated is the most important requisite!
+        Looking for a gym partner to share my passion with. Age doesn’t matter.
+        Motivation and being dedicated is the most important requisite!
       </p>
-      <img id="last" class="event--image" src="../assets/fitness.svg" alt="fitness" />
+      <img
+        id="last"
+        class="event--image"
+        src="../assets/fitness.svg"
+        alt="fitness"
+      />
     </div>
   </div>
   <Navigation :active="active" />
@@ -100,9 +113,9 @@ let active = "home";
 
 <script>
 export default {
-  data: () => {
+  data() {
     return {
-      active: false
+      toggle: true,
     };
   },
 };
@@ -154,7 +167,8 @@ h1 {
   padding: 5px 10px;
 }
 
-.active {
+.participating {
+  color: white;
   background: #ff6700;
   border: 3px solid #ff6700;
   border-radius: 30px;
