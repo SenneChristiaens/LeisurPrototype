@@ -1,14 +1,15 @@
 <script setup>
-import Home from "./components/Home.vue";
+import { RouterView } from 'vue-router'
 
 
 </script>
 
 <template>
-  <Home/>
+  <RouterView />
 </template>
 
 <style>
+@import url('../sass/_global.scss');
 @import url('https://use.typekit.net/kot7xgx.css');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
