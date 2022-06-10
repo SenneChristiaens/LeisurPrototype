@@ -10,14 +10,15 @@ let props = defineProps({
   active: String,
 });
 
-onMounted(() => {
-  switch (props.active) {
-    case "participate":
-      button.classList.toggle("active");
-      button.innerHTML("Participating");
-      break;
-  }
-});
+// button.addEventListener("click", () => {
+//   console.log("clicked");
+//   switch (props.active) {
+//     case "participate":
+//       button.classList.toggle("active");
+//       button.innerHTML("Participating");
+//       break;
+//   }
+// });
 </script>
 
 <template>
