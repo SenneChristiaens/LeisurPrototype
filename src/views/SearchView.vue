@@ -17,7 +17,7 @@ let active = "search";
       </div>
     </div>
     <div>
-      <img src="../assets/niels.png" alt="Niels" />
+      <img src="../assets/niels.svg" alt="Niels" />
       <div class="name">
         <h2>Niels</h2>
         <h2>Verdickt</h2>

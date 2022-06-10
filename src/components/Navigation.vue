@@ -136,6 +136,7 @@ onMounted(() => {
   bottom: 0;
   width: 100%;
   height: 55px;
+  max-height: 55px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
   display: flex;

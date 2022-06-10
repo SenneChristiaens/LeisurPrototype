@@ -35,7 +35,7 @@
     <div class="box">
       <div class="header">
         <div class="profile">
-          <img src="../assets/niels.png" alt="niels" />
+          <img src="../assets/niels.svg" alt="niels" />
           <div class="name">
             <h2>Niels Verdickt</h2>
             <p>I would love to play some tennis! · 1h</p>
